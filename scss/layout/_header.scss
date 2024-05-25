@@ -1,0 +1,96 @@
+%flexItemsCenter{
+    display: flex;
+    align-items: center;
+}
+
+::root{
+    --text-color:#1A162E;
+    --icon-color:#1A162E;
+}
+
+.header{
+    background: #eee;
+}
+
+
+.top-bar{
+    @extend %flexItemsCenter;
+    padding: 30px 0;
+    height: 110px;
+}
+
+.navbar{
+    margin-left: 144px;
+
+    &__list{
+        @extend %flexItemsCenter;
+        gap: 30px;
+        width: 330px;
+    }
+
+    &__link {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%; /* 146.667% */
+    }
+
+
+}
+
+.top-act{
+    margin-left: 310px;
+    @extend %flexItemsCenter;
+    
+    width: 366px;
+    height: 50px;
+    gap: 20px;
+    
+
+    
+    &__group{
+
+        @extend %flexItemsCenter;
+        border-radius: 8px;
+        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
+        background: #fff;
+
+        min-width: 50px;
+        height: 50px;
+    }
+
+    // &__group--single &__btn{
+    //     padding: 13px;
+    // }
+
+    &__btn{
+        @extend %flexItemsCenter;
+        padding: 13px;
+        cursor: pointer;
+        
+    }
+
+    &__title{
+        margin-left: 10px;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%; /* 146.667% */
+    }
+
+    &__separate{
+        width: 1px;
+        height: 30px;
+        background:  #EDEDF6;
+    }
+
+    &__user{
+        @extend %flexItemsCenter;
+        margin-top: 10px;
+    }
+
+    &__avatar{
+        display: block;
+        cursor: pointer;
+    }
+}
