@@ -192,7 +192,6 @@ select {
   margin-left: calc(var(--grid-gutter-x) * 0.5 * -1);
   margin-right: calc(var(--grid-gutter-x) * 0.5 * -1);
 }
-
 .row > * {
   margin-top: var(--grid-gutter-y);
 }
@@ -1241,12 +1240,10 @@ html {
 .navbar {
   margin-left: 144px;
 }
-
 .navbar__list {
   gap: 30px;
   width: 330px;
 }
-
 .navbar__link {
   color: var(--text-color);
   font-size: 1.5rem;
@@ -1260,19 +1257,16 @@ html {
   height: 50px;
   gap: 20px;
 }
-
 .top-act__group {
   border-radius: 8px;
   background: var(--top-act-group-bg-color);
   min-width: 50px;
   height: 50px;
 }
-
 .top-act__btn {
   padding: 13px;
   cursor: pointer;
 }
-
 .top-act__title {
   margin-left: 10px;
   color: var(--text-color);
@@ -1280,17 +1274,14 @@ html {
   font-weight: 500;
   line-height: 146.667%; /* 146.667% */
 }
-
 .top-act__separate {
   width: 1px;
   height: 30px;
   background: var(--top-act-group-separate);
 }
-
 .top-act__user {
   margin-top: 10px;
 }
-
 .top-act__avatar {
   display: block;
   cursor: pointer;
@@ -1301,13 +1292,10 @@ html {
   align-items: center;
   gap: 14px;
 }
-
 .logo.logo__title {
   font-size: 2.2rem;
   font-style: normal;
   font-weight: 700;
   line-height: 145.455%;
   /* 145.455% */
-} 
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

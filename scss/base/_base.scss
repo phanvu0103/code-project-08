@@ -1,38 +1,44 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
 
-::root{
-    --text-color:#1A162E;
-    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(44%) saturate(902%) hue-rotate(210deg) brightness(91%) contrast(96%);
-}
+// ::root {
+//     --text-color: #1a162e;
+//     --icon-color: brightness(0) saturate(100%) invert(8%) sepia(44%)
+//         saturate(902%) hue-rotate(210deg) brightness(91%) contrast(96%);
+// }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 1.6rem;
-    font-family: Gordita ,sans-serif;
+    font-family: Gordita, sans-serif;
     color: var(--text-color);
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-button{
+button {
     border: none;
     outline: none;
     background-color: transparent;
 }
 
-button, textarea, input, select{
+button,
+textarea,
+input,
+select {
     font-family: inherit;
     color: inherit;
 }
 
-.icon{
-    color: var(--icon-color);
+.icon {
+    filter: var(--icon-color);
 }
