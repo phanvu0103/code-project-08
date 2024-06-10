@@ -1,5 +1,4 @@
-@use "../abstracts/";
-
+@use "../abstracts";
 %flexItemsCenter {
     display: flex;
     align-items: center;
@@ -12,33 +11,52 @@
     @extend %flexItemsCenter;
     padding: 30px 0;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.breakpoints(lg) {
         padding: 20px 0;
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoints(sm) {
         padding: 16px 0;
     }
 
     &__more {
         display: none;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.breakpoints(sm) {
             display: block;
         }
+
+        @include abstracts.breakpoints(md) {
+            display: block;
+        }
+
+        @include abstracts.breakpoints(lg) {
+            display: block;
+        }
+
+        @include abstracts.breakpoints(xl) {
+            display: block;
+        }
+        // @include abstracts.breakpoints(xxl) {
+        //     display: block;
+        // }
     }
 }
 
 .navbar {
     margin-left: 144px;
 
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.breakpoints(xl) {
         margin-left: 50px;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.breakpoints(lg) {
         display: none;
     }
+
+    // @include abstracts.breakpoints(xl) {
+    //     display: none;
+    // }
 
     &__list {
         @extend %flexItemsCenter;
@@ -46,11 +64,13 @@
     }
     &__link {
         @extend %flexItemsCenter;
+
         gap: 6px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
     }
+
     &__arrow {
         margin-top: 3px;
     }
@@ -68,13 +88,13 @@
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.breakpoints(md) {
             display: none;
         }
     }
 
     &__group--single {
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.breakpoints(lg) {
             display: none;
         }
     }
