@@ -1,16 +1,10 @@
-@use "../abstracts";
+@use "../abstracts/";
 
 %flexItemsCenter {
     display: flex;
     align-items: center;
 }
 
-// ::root {
-//     --text-color: #1a162e;
-//     --icon-color: #1a162e;
-// }
-
-//
 .header {
     background: var(--header-bg-color);
 }
@@ -18,18 +12,18 @@
     @extend %flexItemsCenter;
     padding: 30px 0;
 
-    @include abstracts.breakpoints(lg) {
-        padding: 20px;
+    @include abstracts.breakpoint(lg) {
+        padding: 20px 0;
     }
 
-    @include abstracts.breakpoints(sm) {
+    @include abstracts.breakpoint(sm) {
         padding: 16px 0;
     }
 
     &__more {
         display: none;
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.breakpoint(lg) {
             display: block;
         }
     }
@@ -38,11 +32,11 @@
 .navbar {
     margin-left: 144px;
 
-    @include abstracts.breakpoints(xl) {
+    @include abstracts.breakpoint(xl) {
         margin-left: 50px;
     }
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.breakpoint(lg) {
         display: none;
     }
 
@@ -74,13 +68,13 @@
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 
-        @include abstracts.breakpoints(md) {
+        @include abstracts.breakpoint(md) {
             display: none;
         }
     }
 
     &__group--single {
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.breakpoint(lg) {
             display: none;
         }
     }
