@@ -1203,16 +1203,6 @@ select {
     --grid-gutter-y: 90px;
   }
 }
-html.dark {
-  --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
-      saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
-  --header-bg-color: #171c28;
-  --top-act-group-bg-color: #292e39;
-  --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-  --top-act-group-separate: #ededf6;
-}
-
 html {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
@@ -1222,6 +1212,16 @@ html {
   --footer-bg-color: var(--header-bg-color);
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
+  --top-act-group-separate: #ededf6;
+}
+
+html.dark {
+  --text-color: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+      saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
+  --header-bg-color: #171c28;
+  --top-act-group-bg-color: #292e39;
+  --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
 }
 
