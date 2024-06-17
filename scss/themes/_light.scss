@@ -6,10 +6,25 @@ html {
         saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
 
     --body-bg: #f6f6f6;
+
+    // header
     --header-bg-color: #eee;
+    --header-shadow-color: rgba(237, 237, 246, 0.2);
+
     --footer-bg-color: var(--header-bg-color);
 
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
+
+    @include abstracts.breakpoints(xl) {
+        --header-bg-color: #fff;
+        --body-bg: #f6f6f6;
+    }
+
+    // dropdown
+    --dropdown-bg-color: #fff;
+    --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+
+    --top-menu-border-color: #d2d1d6;
 }
