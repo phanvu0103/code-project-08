@@ -86,6 +86,16 @@
         }
     }
 
+    // &--grocery {
+    //     display: grid;
+    //     grid-template-columns: repeat(4, 1fr);
+    //     gap: var(--inner-padding);
+
+    //     padding-left: var(--inner-padding);
+
+    //     overflow-y: auto;
+    // }
+
     &__link {
         @extend %flexItemsCenter;
 
