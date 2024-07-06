@@ -21,31 +21,33 @@
     }
 
     @include abstracts.breakpoints(md) {
+        justify-content: space-between;
+
         padding: 16px 0;
     }
 
-    &__more {
-        display: none;
+    // &__more {
+    //     display: none;
 
-        @include abstracts.breakpoints(sm) {
-            display: block;
-        }
+    //     @include abstracts.breakpoints(sm) {
+    //         display: block;
+    //     }
 
-        @include abstracts.breakpoints(md) {
-            display: block;
-        }
+    //     @include abstracts.breakpoints(md) {
+    //         display: block;
+    //     }
 
-        @include abstracts.breakpoints(lg) {
-            display: block;
-        }
+    //     @include abstracts.breakpoints(lg) {
+    //         display: block;
+    //     }
 
-        @include abstracts.breakpoints(xl) {
-            display: block;
-        }
-        // @include abstracts.breakpoints(xxl) {
-        //     display: block;
-        // }
-    }
+    //     @include abstracts.breakpoints(xl) {
+    //         display: block;
+    //     }
+    //     // @include abstracts.breakpoints(xxl) {
+    //     //     display: block;
+    //     // }
+    // }
 }
 
 .navbar {
@@ -188,10 +190,6 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-
-        @include abstracts.breakpoints(md) {
-            display: none;
-        }
     }
 
     &__group--single {
