@@ -11,6 +11,17 @@
 
         overflow-y: auto;
     }
+    @include abstracts.breakpoints(lg) {
+        grid-template-columns: 1fr;
+    }
+
+    &__link {
+        @include abstracts.breakpoints(lg) {
+            margin-left: auto;
+            width: 100%;
+        }
+        grid-template-columns: 1fr;
+    }
 }
 
 .dropdown {
@@ -20,16 +31,21 @@
     padding-top: 54px;
     display: none;
 
+    @include abstracts.breakpoints(lg) {
+        display: block;
+        left: 483px;
+        position: initial;
+        padding-top: 0;
+    }
+
     &__inner {
         --inner-padding: 30px;
-
         position: relative;
-
-        padding: var(--inner-padding);
-
+        padding: 10px;
         border-radius: 20px;
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+
         &::before {
             content: url("../icon/dropdown-arrow.svg");
             position: absolute;
@@ -38,19 +54,38 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoints(lg) {
+            padding: 0 40px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                content: none;
+            }
+        }
     }
 }
 
 .top-menu {
     --main-column-width: 292px;
+    --main-inner-hight: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
 
     position: relative;
+    // display: none;
 
     &__main {
         width: var(--main-column-width);
         height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
+
+        @include abstracts.breakpoints(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 
     &__main--grocery,
@@ -64,11 +99,17 @@
         padding-left: var(--inner-padding);
 
         overflow-y: auto;
+
+        @include abstracts.breakpoints(lg) {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .top-menu--grocery {
     --main-column-width: auto;
+    // display: none;
 
     .menu-column {
         display: flex;
@@ -98,6 +139,7 @@
 
 .top-menu--beauty {
     --main-column-width: auto;
+    display: none;
 
     .menu-column {
         display: flex;
@@ -125,6 +167,10 @@
         margin-top: 20px;
     }
 
+    @include abstracts.breakpoints(lg) {
+        margin-top: 10px;
+    }
+
     &__icon {
         position: relative;
 
@@ -134,6 +180,10 @@
 
         @include abstracts.breakpoints(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoints(lg) {
+            display: block;
         }
     }
 
@@ -161,9 +211,17 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+
+        @include abstracts.breakpoints(lg) {
+            margin-bottom: 26px;
+        }
     }
     &__list {
         margin-top: 19px;
+
+        @include abstracts.breakpoints(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -204,6 +262,26 @@
     padding-left: var(--inner-padding);
 
     overflow-y: auto;
+
+    @include abstracts.breakpoints(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
+    &--not-main {
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: var(--main-inner-hight);
+        padding-left: 0;
+
+        @include abstracts.breakpoints(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+    }
 }
 
 // // @use "../layout";
