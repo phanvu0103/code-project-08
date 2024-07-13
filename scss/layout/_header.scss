@@ -28,6 +28,31 @@
         }
     }
 }
+
+.navbar {
+    &--grocery {
+        inset: 0 0 0 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--inner-padding);
+
+        padding-left: var(--inner-padding);
+
+        overflow-y: auto;
+    }
+    @include abstracts.breakpoints(lg) {
+        grid-template-columns: 1fr;
+    }
+
+    &__link {
+        @include abstracts.breakpoints(lg) {
+            margin-left: auto;
+            width: 100%;
+        }
+        grid-template-columns: 1fr;
+    }
+}
+
 .navbar {
     margin-left: 129px;
     @include abstracts.breakpoints(xl) {

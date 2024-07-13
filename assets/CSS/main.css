@@ -1379,6 +1379,29 @@ html.dark {
   }
 }
 
+.navbar--grocery {
+  inset: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--inner-padding);
+  padding-left: var(--inner-padding);
+  overflow-y: auto;
+}
+@media (max-width: 991.98px) {
+  .navbar {
+    grid-template-columns: 1fr;
+  }
+}
+.navbar__link {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 991.98px) {
+  .navbar__link {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+
 .navbar {
   margin-left: 129px;
 }
@@ -1555,40 +1578,15 @@ html.dark {
   }
 }
 
-.navbar--grocery {
-  inset: 0 0 0 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--inner-padding);
-  padding-left: var(--inner-padding);
-  overflow-y: auto;
-}
-@media (max-width: 991.98px) {
-  .navbar {
-    grid-template-columns: 1fr;
-  }
-}
-.navbar__link {
-  grid-template-columns: 1fr;
-}
-@media (max-width: 991.98px) {
-  .navbar__link {
-    margin-left: auto;
-    width: 100%;
-  }
-}
-
 .dropdown {
   position: absolute;
-  left: 306px;
+  left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
   display: none;
 }
 @media (max-width: 991.98px) {
   .dropdown {
-    display: block;
-    left: 483px;
     position: initial;
     padding-top: 0;
   }
@@ -1596,13 +1594,13 @@ html.dark {
 .dropdown__inner {
   --inner-padding: 30px;
   position: relative;
-  padding: 10px;
+  padding: var(--inner-padding);
   border-radius: 20px;
   background: var(--dropdown-bg-color);
   box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
 }
 .dropdown__inner::before {
-  content: url("../icon/dropdown-arrow.svg");
+  content: url("../icons/dropdown-arrow.svg");
   position: absolute;
   top: -13px;
   left: var(--arrow-left-pos);
@@ -1623,12 +1621,12 @@ html.dark {
 
 .top-menu {
   --main-column-width: 292px;
-  --main-inner-hight: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
   width: var(--main-column-width);
-  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
@@ -1680,7 +1678,6 @@ html.dark {
 
 .top-menu--beauty {
   --main-column-width: auto;
-  display: none;
 }
 .top-menu--beauty .menu-column {
   display: flex;

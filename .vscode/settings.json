@@ -1,3 +1,4 @@
 {
-    "prettier.printWidth": 180
+    "prettier.printWidth": 180,
+    "editor.cursorSmoothCaretAnimation": "on"
 }
