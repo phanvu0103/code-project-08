@@ -1,0 +1,21 @@
+@use "../abstracts";
+
+.home {
+    --color: #1a162e;
+
+    &__container {
+        margin-top: 40px;
+    }
+    @include abstracts.screen(md) {
+        margin-top: 30px;
+    }
+
+    &__heading {
+        /* Bold 24 */
+        color: var(--color);
+        font-size: 2.4rem;
+
+        font-weight: 700;
+        line-height: 141.667%; /* 141.667% */
+    }
+}
